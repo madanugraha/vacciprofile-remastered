@@ -51,8 +51,30 @@ export default function Episode({ episode }) {
           <hr className="my-12 border-gray-200" />
           <div
             className="prose prose-slate mt-14 [&>h2:nth-of-type(3n)]:before:bg-violet-200 [&>h2:nth-of-type(3n+2)]:before:bg-indigo-200 [&>h2]:mt-12 [&>h2]:flex [&>h2]:items-center [&>h2]:font-mono [&>h2]:text-sm [&>h2]:font-medium [&>h2]:leading-7 [&>h2]:text-slate-900 [&>h2]:before:mr-3 [&>h2]:before:h-3 [&>h2]:before:w-1.5 [&>h2]:before:rounded-r-full [&>h2]:before:bg-cyan-200 [&>ul]:mt-6 [&>ul]:list-['\2013\20'] [&>ul]:pl-5"
-            dangerouslySetInnerHTML={{ __html: episode.content }}
-          />
+          >
+            <h2 id="topics">Topics</h2>
+            <ul>
+              <li>xxxxxxx saepe veritatis unde ea omnis repudiandae neque unde sapiente</li>
+              <li>Praesentium velit ratione</li>
+              <li>Deserunt ullam sit perspiciatis</li>
+              <li>Omnis occaecati tempore numquam delectus iste iste odio</li>
+              <li>Est qui consequuntur quis quia quod ipsum consectetur ad aperiam</li>
+              <li>Voluptate laborum cum dignissimos esse debitis incidunt tempore</li>
+            </ul>
+            <h2 id="sponsors">Sponsors</h2>
+            <ul>
+              <li><a href="#">Initech</a> â€” Pioneers of the TPS report, Initech is actively looking for job-seekers with people skills who can work with customers to gather specifications and deliver them to the software people.</li>
+              <li><a href="#">Globex Corporation</a> â€” Just a friendly and innocent high-tech company, with a casual work environment and an office without walls. Anything youâ€™ve heard about a â€œdoomsday deviceâ€ is pure conjecture and not based in fact.</li>
+            </ul>
+            <h2 id="links">Links</h2>
+            <ul>
+              <li><a href="#">Quis laboriosam</a> molestiae tempore necessitatibus</li>
+              <li><a href="#">Sit autem</a> neque minima itaque sit commodi</li>
+              <li>Eos ratione <a href="#">blanditiis</a></li>
+              <li>Eius a <a href="#">qui quasi</a></li>
+              <li>Laborum laudantium sunt <a href="#">mollitia aliquam</a> corporis</li>
+            </ul>
+          </div>
         </Container>
       </article>
     </>
