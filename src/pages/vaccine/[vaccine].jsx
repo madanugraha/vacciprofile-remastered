@@ -2,10 +2,8 @@ import { useMemo } from 'react'
 import Head from 'next/head'
 import { parse } from 'rss-to-json'
 
-import { useAudioPlayer } from '@/components/AudioProvider'
 import { Container } from '@/components/Container'
 import { FormattedDate } from '@/components/FormattedDate'
-import { PlayButton } from '@/components/player/PlayButton'
 import { vaccinesData } from '@/data/vaccines'
 
 export default function Vaccine({ vaccine }) {

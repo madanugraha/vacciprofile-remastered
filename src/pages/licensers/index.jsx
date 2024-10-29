@@ -1,12 +1,8 @@
-import { useMemo } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { parse } from 'rss-to-json'
 import { toast, Bounce } from 'react-toastify'
-import { useAudioPlayer } from '@/components/AudioProvider'
 import { Container } from '@/components/Container'
-import { FormattedDate } from '@/components/FormattedDate'
-import { vaccinesData } from '@/data/vaccines'
+import { licensersData } from '@/data/licensers'
 
 function PlayPauseIcon({ playing, ...props }) {
   return (
@@ -24,26 +20,22 @@ function PlayPauseIcon({ playing, ...props }) {
   )
 }
 
-function VaccinesEntry({ vaccine }) {
+function LicensersEntry({ licenser }) {
   return (
     <article
-      aria-labelledby={`vaccine-${vaccine.vaccineId}-title`}
+      aria-labelledby={`licenser-${licenser.licenserId}-title`}
       className="py-10 sm:py-12"
     >
       <Container>
         <div className="flex flex-col items-start">
           <h2
-            id={`vaccine-${vaccine.vaccineId}-title`}
+            id={`licenser-${licenser.licenserId}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
-            <Link href={`/vaccine/${vaccine.vaccineId}`}>{vaccine.name}</Link>
+            <Link href={`/licencers/${licenser.licenserId}`}>{licenser.fullName} ({licenser.acronym})</Link>
           </h2>
-          <FormattedDate
-            date={new Date()}
-            className="order-first font-mono text-sm leading-7 text-slate-500"
-          />
           <p className="mt-1 text-base leading-7 text-slate-700">
-            {vaccine.description}
+            {licenser.description}
           </p>
           <div className="mt-4 flex items-center gap-4">
             <button
@@ -62,7 +54,7 @@ function VaccinesEntry({ vaccine }) {
                 });
               }}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`${false ? 'Pause' : 'Play'} episode ${vaccine.name
+              aria-label={`${false ? 'Pause' : 'Play'} episode ${licenser.name
                 }}`}
             >
               <PlayPauseIcon
@@ -73,45 +65,6 @@ function VaccinesEntry({ vaccine }) {
                 Listen
               </span>
             </button>
-            <span
-              aria-hidden="true"
-              className="text-sm font-bold text-slate-400"
-            >
-              /
-            </span>
-            <Link
-              href={`/${vaccine.name}`}
-              className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${vaccine.name}`}
-            >
-              Show Pathogens
-            </Link>
-            <span
-              aria-hidden="true"
-              className="text-sm font-bold text-slate-400"
-            >
-              /
-            </span>
-            <Link
-              href={`/${vaccine.name}`}
-              className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${vaccine.name}`}
-            >
-              Show Manufacturers
-            </Link>
-            <span
-              aria-hidden="true"
-              className="text-sm font-bold text-slate-400"
-            >
-              /
-            </span>
-            <Link
-              href={`/${vaccine.name}`}
-              className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${vaccine.name}`}
-            >
-              Show Licensers
-            </Link>
           </div>
         </div>
       </Container>
@@ -120,7 +73,7 @@ function VaccinesEntry({ vaccine }) {
 }
 
 
-export default function Home({ episodes, vaccines }) {
+export default function LicensersList({ licensers }) {
   return (
     <>
       <Head>
@@ -135,13 +88,13 @@ export default function Home({ episodes, vaccines }) {
       <div className="pb-12 pt-16 sm:pb-4 lg:pt-12">
         <Container>
           <h1 className="text-2xl font-bold leading-7 text-slate-900">
-            Vaccines
+            Licensers
           </h1>
         </Container>
         <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
-          {vaccines.map((vaccine) => {
+          {licensers.map((licenser) => {
             return (
-              <VaccinesEntry key={vaccine.vaccineId} vaccine={vaccine} />
+              <LicensersEntry key={licenser.licenserId} licenser={licenser} />
             )
           })}
         </div>
@@ -153,7 +106,7 @@ export default function Home({ episodes, vaccines }) {
 export async function getStaticProps() {
   return {
     props: {
-      vaccines: vaccinesData
+      licensers: licensersData
     }
   }
 }

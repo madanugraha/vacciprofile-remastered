@@ -376,14 +376,30 @@ export function Layout({ children }) {
               className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
             >
               {[
-                ['Vaccines', VaccineIcon],
-                ['Pathogens', PathogenIcon],
-                ['Manufacturers', ManufactureIcon],
-                ['Licensing Authorities', AuthorityIcon],
-              ].map(([label, Icon]) => (
+                {
+                  label: 'Vaccines',
+                  Icon: VaccineIcon,
+                  rel: '/',
+                },
+                {
+                  label: 'Pathogens',
+                  Icon: PathogenIcon,
+                  rel: '/pathogen',
+                },
+                {
+                  label: 'Manufacturers',
+                  Icon: ManufactureIcon,
+                  rel: '/manufacturers',
+                },
+                {
+                  label: 'Licensing Authorities',
+                  Icon: AuthorityIcon,
+                  rel: '/licensers',
+                }
+              ].map(({ label, Icon, rel }, idx) => (
                 <li key={label} className="flex">
                   <Link
-                    href="/"
+                    href={rel}
                     className="group flex items-center"
                     aria-label={label}
                   >

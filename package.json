@@ -10,6 +10,9 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.5",
     "@tailwindcss/typography": "^0.5.7",
     "@tunnel/get-monorepo": "1.0.0",
     "autoprefixer": "^10.4.12",
