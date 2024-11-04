@@ -13,7 +13,6 @@ import ArrowBackIcon from '@/icons/arrow-back';
 import { getVaccinesByPathogenId } from '@/utils/vaccine';
 import { getManufactureDetailByManufactureIds } from '@/utils/manufacture';
 
-
 const style = {
   position: 'absolute',
   top: '50%',
@@ -26,7 +25,6 @@ const style = {
   p: 6,
   borderRadius: 4
 };
-
 
 
 function PlayPauseIcon({ playing, ...props }) {
@@ -107,7 +105,7 @@ function PathogensEntry({ pathogen }) {
               id={`pathogen-${pathogen.pathogenId}-title`}
               className="mt-2 text-lg font-bold text-slate-900"
             >
-              <Link href={`/pathogen/${pathogen.pathogenId}`}>{pathogen.name}</Link>
+              <Link href={`/pathogens/pathogen/${pathogen.pathogenId}`}>{pathogen.name}</Link>
             </h2>
             {/* <FormattedDate
               date={new Date()}

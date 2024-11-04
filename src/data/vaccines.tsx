@@ -6,7 +6,7 @@ export const vaccinesData = [
         "manufacturers": [
             {
                 "manufacturerId": 1
-            }
+            },
         ],
         "licensers": [
             {
@@ -1703,6 +1703,42 @@ export const vaccinesData = [
                 "name": "TGA",
                 "date": "Not yet approved",
                 "source": "https://www.tga.gov.au/covid-19-vaccine-provisional-determinations"
+            }
+        ],
+        "introduction": {
+            "General Information": {
+                "Map Vaccine Preventable Diseases": "Map by disease",
+                "Vaccine SmPCs (FDA, EMA, WHO, others)": "Search by disease, include combos",
+                "Product profiles": "Available via Sinovac",
+                "Pipeline products - summary table": "",
+                "Failed products": ""
+            },
+            "Company products, pipeline": {
+                "VPD-BoD, Product presentations, Monograph": "CoronaVac targets SARS-CoV-2.",
+                "Pivotal publications / data vaccines": "",
+                "Interviews": "Sinovac resources",
+                "Relevant literature": "Available from WHO and Sinovac",
+                "Pipeline products - detailed information (TPP)": ""
+            }
+        },
+        "productProfiles": [
+            {
+                "type": "WHO",
+                "name": "CoronaVac (Sinovac Biotech) COVID-19 Vaccine",
+                "composition": "Inactivated virus vaccine using a dead version of the SARS-CoV-2 virus.",
+                "strainCoverage": "SARS-CoV-2.",
+                "indication": "Active immunization for individuals aged 18 years and above to prevent COVID-19.",
+                "dosing": "Two doses of 0.5 mL administered intramuscularly, typically 14 to 28 days apart.",
+                "contraindication": "History of severe allergic reaction to any component of the vaccine.",
+                "immunogenicity": "Induces humoral and cell-mediated immunity with seroconversion rates of approximately 95.6% for IgG specific against the spike protein.",
+                "efficacyEndpointsPhase3": "Efficacy assessed through prevention of symptomatic infection and severe disease.",
+                "efficacyData": "Efficacy rate of approximately 51% against symptomatic infection and 100% against severe cases and hospitalization.",
+                "durationOfProtection": "Exact duration unknown; studies suggest a booster may enhance immunity.",
+                "coAdministration": "Can be administered with other vaccines without significant interactions.",
+                "reactogenicity": "Common side effects include injection site pain, fatigue, diarrhea, and muscle pain, generally mild.",
+                "safety": "Considered safe with a well-documented safety profile; monitored continuously for adverse effects.",
+                "vaccinationGoal": "To provide individual protection against COVID-19 and contribute to herd immunity.",
+                "others": "Approved for use in over 52 countries and widely used globally."
             }
         ],
         "description": "mRNA-1388 is a vaccine candidate targeting Chikungunya virus, designed to protect against the severe joint pain and other symptoms associated with the infection.",

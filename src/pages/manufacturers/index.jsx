@@ -23,16 +23,16 @@ function PlayPauseIcon({ playing, ...props }) {
 function ManufacturersEntry({ manufacture }) {
   return (
     <article
-      aria-labelledby={`manufacture-${manufacture.manufactureId}-title`}
+      aria-labelledby={`manufacture-${manufacture.manufacturerId}-title`}
       className="py-10 sm:py-12"
     >
       <Container>
         <div className="flex flex-col items-start">
           <h2
-            id={`manufacturers-${manufacture.manufactureId}-title`}
+            id={`manufacturers-${manufacture.manufacturerId}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
-            <Link href={`/manufacturers/${manufacture.manufactureId}`}>{manufacture.name}</Link>
+            <Link href={`/manufacturers/manufacture/${manufacture.manufacturerId}`}>{manufacture.name}</Link>
           </h2>
           <p className="mt-1 text-base leading-7 text-slate-700">
             {manufacture.description}
@@ -94,7 +94,7 @@ export default function ManufacturersList({ manufacturers }) {
         <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
           {manufacturers.map((manufacture) => {
             return (
-              <ManufacturersEntry key={manufacture.manufactureId} manufacture={manufacture} />
+              <ManufacturersEntry key={manufacture.manufacturerId} manufacture={manufacture} />
             )
           })}
         </div>

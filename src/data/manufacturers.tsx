@@ -41,9 +41,6 @@ export const manufacturersData = [
                 "vaccineId": 8
             },
             {
-                "vaccineId": 2
-            },
-            {
                 "vaccineId": 4
             },
             {

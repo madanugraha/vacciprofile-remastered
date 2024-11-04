@@ -384,7 +384,7 @@ export function Layout({ children }) {
                 {
                   label: 'Pathogens',
                   Icon: PathogenIcon,
-                  rel: '/pathogen',
+                  rel: '/pathogens',
                 },
                 {
                   label: 'Manufacturers',

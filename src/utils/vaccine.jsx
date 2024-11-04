@@ -11,5 +11,14 @@ export const getVaccinesByPathogenId = (id) => {
 }
 
 export const getVaccineDetailByManufactureId = (id) => {
-    
+    const data = null;
+}
+
+export const getVaccineById = (id) => {
+    const vaccines = vaccinesData;
+    if (vaccines.length > 0) {
+        const result = vaccinesData.filter((data) => data.vaccineId === id)[0]
+        return result;
+    }
+    return null;
 }

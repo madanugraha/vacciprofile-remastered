@@ -32,7 +32,7 @@ function LicensersEntry({ licenser }) {
             id={`licenser-${licenser.licenserId}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
-            <Link href={`/licencers/${licenser.licenserId}`}>{licenser.fullName} ({licenser.acronym})</Link>
+            <Link href={`/licensers/licenser/${licenser.licenserId}`}>{licenser.fullName} ({licenser.acronym})</Link>
           </h2>
           <p className="mt-1 text-base leading-7 text-slate-700">
             {licenser.description}
